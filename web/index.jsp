@@ -6,172 +6,61 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="estilos.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-                
-        <title>Sua Rotina</title>
-    <style>
-        *{
-            padding: 5px;
-        }
-        body{
-            background-color: #ffffff;
-        }
-        #header{
-            background-color: #A4D59C;
-            display: block;
-            height: 150px;
-            color: #FFFFFF;
-            font-family: 'Dancing Script', cursive;
-        }
-        #logo{
-            padding-left: 65px;
-            text-align: center;
-        }
-        #header #logo{
-            text-align: center;
-            font-size: 70px;
-        }
-        #header #user{
-            display: inline;
-            float: right;
-            font-size: x-large;
-        }
-        #header .botao{
-            display: inline;
-            float: right;
-            position: absolute;
-            top: 90px;
-            right: 30px;
-        }
-        #main{
-
-            float : right;
-            width: 81%;
-            margin-top: 10px;
-        }
-        #main form{
-            display: inline;
-        }
-        .botao {
-            background-color: #A1D399;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            position: relative;
-            float: right;
-        }
-
-        .botao:hover{
-            background-color: #8AD37D;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-        #main h3{
-            margin: 0px;
-            background-color: #bdecb6;
-            color: #FFFFFF;
-        }
-        #main p{
-            color: #000000;
-            display: inline-block;
-        }
-
-        #nav{
-            color: #FFFFFF;
-            width: 16%;
-            height: 500px;
-            margin-top: 10px;
-        }
-        #nav li{
-          
-            position: relative;
-            margin-bottom: 45px;
-            list-style:none;
-        }
-        #nav li .botao {
-            width: 100%;
-            position: absolute;
-        }
         
-    </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+          
+        <title>Sua Rotina</title>
         
     </head>
 
     <body>
-        <div id="header">
-        <h1 id ="logo">Sua Rotina</h1>
-        </div>
-        
-        <div id="main"><h3>Suas Atividades</h3>
+        <nav class="nav nav-pills nav-fill">
+             <a class="nav-item nav-link active" href="acao=ListarProcessos">Home</a>
+            <a class="nav-item nav-link" href="#">Criar Novo</a>
+            <a class="nav-item nav-link disabled" href="#">Login</a>
+        </nav>   
+        <header>
+            <div class="jumbotron">
+                <h1 class="display-4">Gerenciador de Projetos</h1>
+                <p class="lead">Gerencie por aqui suas rotina de processo</p>
+                <hr class="my-4">
+
+            </div>
+        </header>
+        <div class="p-5">
             <c:if   test="${processos.size() > 0}">
-                <c:forEach items="${processos}" var="cont" varStatus="contStatus">
-                    <div class="processo"><p>${cont.nome}</p>
-                        <form action="Servlet" method="post" >
-                            <input type="hidden" name="acao" value="ExcluirProcesso"/>
-                            <input type="hidden" name="id" value="${cont.id}"/>
-                            
-                            <button type ="submit" class="botao">Excluir</button>
-                        </form>
-                        <form action="Servlet" method="post" >
-                            <input type="hidden" name="acao" value="Editando"/>
-                            <input type="hidden" name="id" value="${cont.id}"/>
-                            <input type="hidden" name="pagina" value="processo"/>
-                            <c:if test="${not editando}">
-                                <button type="submit" class="botao">Editar</button>
-                            </c:if>
-                        </form>
-
-                        <c:if test="${editando}">
-                            <c:if test="${id_editando < contStatus}">
-                            <form action="Servlet" method="post" >
-                                <input type="hidden" name="acao" value="EditarProcesso"/>
-                                <input type="hidden" name="id" value="${cont.id}"/>
-                                <input type="text" name="nome" value="${cont.nome}"/>
-                                <button type ="submit" class="botao">Salvar</button>
-                            </form>
-                            </c:if>
-                        </c:if>
-
-                        <form action="Servlet" method="post" >
-                        <input type="hidden" name="acao" value="AbrirTarefa"/>
-                            <input type="hidden" name="acao" value="abrirTarefa"/>
-                            <input type="hidden" name="id" value="${cont.id}"/>
-                            
-                            <button type ="submit" class="botao">Abrir</button>
-                        </form>
+            <div class="container">
+              <div class="row hidden-md-up">
+                <c:forEach items="${processos}" var="item">
+                    <div class="col-md-4">
+                      <div class="card m-2 my-4 p-3">
+                        <div class="card-block">
+                          <h4 class="card-title">${item.nome}</h4>
+                          <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                          <p class="card-text p-y-1">Some quick example text to build on the card title .</p>
+                          <a href="tarefa?id=${item.id}&acao=AbrirTarefa" class="card-link">Abrir</a>
+                          <a href="tarefa?id=${item.id}&acao=ExcluirProcesso" class="card-link">Excluir</a>
+                        </div>
+                      </div>
                     </div>
-                </c:forEach>
+                </c:forEach>                      
+              </div>
+            </div>
             </c:if>
-            <c:if   test="${processos.size() < 1}">
-                <p>Você não tem nenhum processo salvo</p>
-            </c:if>  
+             <c:if   test="${processos.size() < 0}">
+                <span>Nenhum processo</span>
+             </c:if>
         </div>   
-        <div id="nav">
-            <ul>
-                <li><form action="Servlet" method="post" >
-                    <input type="hidden" name="acao" value="ListarProcessos"/>
-                    <button type ="submit" class="botao">Home</button>
-                    </form>
-                </li>
-                <li><a href="novoProcesso.jsp"><button class="botao" name="criaNovo">Criar Nova</button></a></li>
-            </ul>
-        </div>
+
         <div id="footer"> 
-        
+
         </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>

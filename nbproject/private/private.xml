@@ -3,20 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/src/java/model/Tarefa.java</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/src/java/persistencia/TarefaDAO.java</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/src/java/controller/Controlador.java</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/build/web/estilos.css</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/src/java/controller/ListarProcessos.java</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/build/web/tarefa.jsp</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/build/web/index.jsp</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/build/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/src/java/persistencia/ProcessoDAO.java</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/src/java/controller/EditarProcesso.java</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/src/java/controller/CriarTarefa.java</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/src/java/controller/CommandFactory.java</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/src/java/model/Processo.java</file>
-            <file>file:/C:/Users/Addson%20Coutinho/Desktop/trabalhoM2/GerenciadorProcessos/Rotina/src/java/controller/MudarEstado.java</file>
+            <file>file:/C:/Users/Addson%20Coutinho/development/GerenciadorProcessos/Rotina/web/tarefa.jsp</file>
+            <file>file:/C:/Users/Addson%20Coutinho/development/GerenciadorProcessos/Rotina/src/java/controller/Controlador.java</file>
+            <file>file:/C:/Users/Addson%20Coutinho/development/GerenciadorProcessos/Rotina/src/java/controller/ExcluirProcesso.java</file>
+            <file>file:/C:/Users/Addson%20Coutinho/development/GerenciadorProcessos/Rotina/src/java/controller/ExcluirTarefa.java</file>
+            <file>file:/C:/Users/Addson%20Coutinho/development/GerenciadorProcessos/Rotina/src/java/controller/AbrirTarefa.java</file>
+            <file>file:/C:/Users/Addson%20Coutinho/development/GerenciadorProcessos/Rotina/web/index.jsp</file>
+            <file>file:/C:/Users/Addson%20Coutinho/development/GerenciadorProcessos/Rotina/src/java/controller/EditarTarefa.java</file>
+            <file>file:/C:/Users/Addson%20Coutinho/development/GerenciadorProcessos/Rotina/src/java/controller/ListarProcessos.java</file>
         </group>
     </open-files>
 </project-private>
