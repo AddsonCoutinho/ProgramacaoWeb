@@ -24,7 +24,7 @@
         </nav>   
         <header>
             <div class="jumbotron">
-                <h1 class="display-4">Gerenciador de Projetos</h1>
+                <h1 class="display-4">Gerenciador de Projeto</h1>
                 <p class="lead">Gerencie por aqui suas rotina de processo</p>
                 <hr class="my-4">
 
